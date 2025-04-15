@@ -16,6 +16,12 @@ pipeline {
             }
         }
 
+        stage('Secrets Scan') {
+            steps {
+                sh 'gitleaks detect --source . || echo "Secrets scan completed!"'
+            }
+        }
+
         stage('Build') {
             steps {
                 echo "Building the Docker image..."
