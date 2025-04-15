@@ -18,6 +18,7 @@ pipeline {
 
         stage('Secrets Scan') {
             steps {
+                echo "Secrets scan for API Secret..."
                 sh 'gitleaks detect --source . || echo "Secrets scan completed!"'
             }
         }
