@@ -17,19 +17,19 @@ You can **build and run** your container using the Docker CLI:
 #### ✅ 1. **Build the Docker image**
 
 ```bash
-docker build -t nodejs-with-test:latest .
+docker build -t maainul/nodejs-with-test:latest .
 ```
 
 #### ✅ 2. **Run the container**
 
 ```bash
-docker run -p 8000:8000 nodejs-with-test:latest
+docker run -p 8000:8000 maainul/nodejs-with-test:latest
 ```
 
 If you want to run in the background:
 
 ```bash
-docker run -d -p 8000:8000 nodejs-with-test:latest
+docker run -d -p 8000:8000 maainul/nodejs-with-test:latest
 ```
 
 ### 🧠 `docker run -p 8000:8000 nodejs-with-test:latest` — What it Means:
