@@ -94,7 +94,7 @@ If you:
 ---
 
 ## Build and Push to Docker Hub
-
+```bash
 docker login
 
 docker build -t maainul/nodejs-with-test:latest .
@@ -102,13 +102,16 @@ docker build -t maainul/nodejs-with-test:latest .
 docker push maainul/nodejs-with-test:latest
 
 docker images
+```
 
 ## Now Pull and Run IT:
-
+```bash
 docker pull maainul/nodejs-with-test:latest
 
 docker run -it -p 8000:8000 maainul/nodejs-with-test:latest
+```
 
 ## Show images and container
-
+```bash
 docker images && docker ps -a
+```
