@@ -1,6 +1,10 @@
-docker-compose up --build
+## With docker compose
 
-## 🙌 1. without docker compose can I run and build image and container
+```bash
+docker-compose up --build
+```
+
+## 🙌 without docker compose can I run and build image and container
 
 Yes, **can absolutely use Docker without Docker Compose** — but Compose just makes life easier, especially when working with multiple services or wanting a quick workflow.
 
