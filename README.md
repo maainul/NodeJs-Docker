@@ -1,4 +1,4 @@
-## With docker compose
+## 🙌 With docker compose
 
 ```bash
 docker-compose up --build
