@@ -2,7 +2,7 @@ services:
   node-server:
     build:
       context: .
-    image: "nodejs-with-docker-test:latest"
+    image: "maainul/nodejs-docker:latest"
     ports:
       - "8000:8000"
     volumes:
