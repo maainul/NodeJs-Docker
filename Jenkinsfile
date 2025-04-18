@@ -22,17 +22,15 @@ pipeline {
                     if ! command -v gitleaks &> /dev/null
                     then
                         echo "Installing Gitleaks..."
-                        curl -sSL https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks-linux-amd64 -o gitleaks
-                        chmod +x gitleaks
-                        sudo mv gitleaks /usr/local/bin
+                        curl -s https://packagecloud.io/install/repositories/zricethezav/gitleaks/script.deb.sh | sudo bash
+                        sudo apt install gitleaks
                     fi
-
                     echo "Running Gitleaks secrets scan..."
-                    gitleaks detect --source . || echo "⚠️ Secrets scan completed with findings!"
+                    gitleaks detect --source .
                 '''
             }
         }
-        
+
         stage('Build') {
             steps {
                 echo "Building the Docker image..."
