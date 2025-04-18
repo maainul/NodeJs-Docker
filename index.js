@@ -1,5 +1,3 @@
-API_KEY = "ghp_16CharsofGitHubToken"
-
 const express = require("express");
 
 const app = express();
