@@ -18,11 +18,21 @@ pipeline {
 
         stage('Secrets Scan') {
             steps {
-                echo "Secrets scan for API Secret..."
-                sh 'gitleaks detect --source . || echo "Secrets scan completed!"'
+                sh '''
+                    if ! command -v gitleaks &> /dev/null
+                    then
+                        echo "Installing Gitleaks..."
+                        curl -sSL https://github.com/gitleaks/gitleaks/releases/latest/download/gitleaks-linux-amd64 -o gitleaks
+                        chmod +x gitleaks
+                        sudo mv gitleaks /usr/local/bin
+                    fi
+
+                    echo "Running Gitleaks secrets scan..."
+                    gitleaks detect --source . || echo "⚠️ Secrets scan completed with findings!"
+                '''
             }
         }
-
+        
         stage('Build') {
             steps {
                 echo "Building the Docker image..."
