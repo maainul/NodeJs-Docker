@@ -14,6 +14,11 @@ pipeline {
                 echo "Docker image built successfully!"
             }
         }
+        stage('TRIVY FS SCAN') {
+            steps {
+                sh 'trivy fs . || echo "FS scan completed with vulnerabilities."'
+            }
+        }
         stage('Test') {
             steps {
                 echo "Running tests..."
