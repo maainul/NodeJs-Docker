@@ -109,8 +109,9 @@ docker pull maainul/nodejs-with-test:latest
 
 docker run -it -p 8000:8000 maainul/nodejs-with-test:latest
 ```
-
 ## Show images and container
 ```bash
 docker images && docker ps -a
 ```
+# CICD PIPELINE
+![Image](https://github.com/user-attachments/assets/b379de69-dab4-40d9-ad4a-5bef3495e8e4)
