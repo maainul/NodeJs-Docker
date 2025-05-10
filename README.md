@@ -7,7 +7,6 @@ docker-compose up --build
 ## 🙌 without docker compose can I run and build image and container
 
 Yes, **can absolutely use Docker without Docker Compose** — but Compose just makes life easier, especially when working with multiple services or wanting a quick workflow.
-
 ---
 
 ### 🔧 Without Docker Compose (pure Docker CLI):
@@ -110,10 +109,65 @@ docker pull maainul/nodejs-with-test:latest
 
 docker run -it -p 8000:8000 maainul/nodejs-with-test:latest
 ```
-
 ## Show images and container
 ```bash
 docker images && docker ps -a
+```
+## Step 2 : AWS Setup : With Multibranch : 
+
+1. Create one Jenkins Server
+2. 3 Nodejs Server (Dev,Prod,QA)
+
+
+# CICD PIPELINE
+![Image](https://github.com/user-attachments/assets/b379de69-dab4-40d9-ad4a-5bef3495e8e4)
+
+
+## How to deploy on the vercel:
+
+Create this file on the application:
+
+```json
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "server.js"
+        }
+    ]
+}
+```
+# CICD PIPELINE
+![Image](https://github.com/user-attachments/assets/b379de69-dab4-40d9-ad4a-5bef3495e8e4)
+
+
+## How to deploy on the vercel:
+
+Create this file on the application:
+
+```json
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "server.js"
+        }
+    ]
+}
 ```
 ## Step 2 : AWS Setup : With Multibranch : 
 
