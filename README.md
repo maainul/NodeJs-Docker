@@ -115,3 +115,8 @@ docker run -it -p 8000:8000 maainul/nodejs-with-test:latest
 ```bash
 docker images && docker ps -a
 ```
+## Step 2 : AWS Setup : With Multibranch : 
+
+1. Create one Jenkins Server
+2. 3 Nodejs Server (Dev,Prod,QA)
+3. 
