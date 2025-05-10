@@ -1,3 +1,6 @@
+# CICD PIPELINE
+![Image](https://github.com/user-attachments/assets/b379de69-dab4-40d9-ad4a-5bef3495e8e4)
+
 ## 🙌 With docker compose
 
 ```bash
@@ -144,9 +147,6 @@ Create this file on the application:
     ]
 }
 ```
-# CICD PIPELINE
-![Image](https://github.com/user-attachments/assets/b379de69-dab4-40d9-ad4a-5bef3495e8e4)
-
 
 ## How to deploy on the vercel:
 
